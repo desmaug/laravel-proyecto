@@ -8,4 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class Image extends Model
 {
     use HasFactory;
+
+    protected $table = 'images';
+
+    public function comments(){
+        return $this->hasMany(Comments::class);
+    }
+
+    public function likes(){
+        return $this->hasMany(Likes::class);
+    }
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
 }
