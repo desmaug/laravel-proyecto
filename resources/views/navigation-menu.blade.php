@@ -35,7 +35,7 @@
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><a class="dropdown-item" type="button" href="{{ route('profile.show') }}">Mi Perfil</a></li>
-                            <li><button class="dropdown-item" type="button" action="{{ route('profile.show') }}">Configuracion</button></li>
+                            <li><a class="dropdown-item" type="button" href="{{ route('config') }}">Configuracion</a></li>
                             
                             <form method="POST" action="{{ route('logout') }}" x-data>
                                     @csrf

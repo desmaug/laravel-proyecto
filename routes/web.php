@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Database\Eloquent\Model;
@@ -58,3 +59,8 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('/configuracion', [UserController::class, 'config'])->name('config');
+
+
+
