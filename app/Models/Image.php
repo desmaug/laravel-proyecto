@@ -12,11 +12,11 @@ class Image extends Model
     protected $table = 'images';
 
     public function comments(){
-        return $this->hasMany(Comments::class);
+        return $this->hasMany(Comment::class);
     }
 
     public function likes(){
-        return $this->hasMany(Likes::class);
+        return $this->hasMany(Like::class);
     }
 
     public function user(){
@@ -24,3 +24,4 @@ class Image extends Model
     }
 
 }
+ 
